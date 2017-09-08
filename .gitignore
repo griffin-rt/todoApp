@@ -39,3 +39,7 @@
 
 # Backup entities generated with doctrine:generate:entities command
 **/Entity/*~
+
+
+#Created automatically during composer install
+/vendor/*
