@@ -1,5 +1,5 @@
 {
-    "name": "pawan/symfonyapp",
+    "name": "pawan/todoApp",
     "license": "proprietary",
     "type": "project",
     "autoload": {
@@ -26,7 +26,8 @@
         "nelmio/api-doc-bundle": "^2.13",
         "doctrine/migrations": "^1.4",
         "lexik/maintenance-bundle": "^2.1",
-        "doctrine/doctrine-migrations-bundle": "^1.1"
+        "doctrine/doctrine-migrations-bundle": "^1.1",
+        "guzzlehttp/guzzle": "^6.3"
     },
     "require-dev": {
         "sensio/generator-bundle": "~3.0",
