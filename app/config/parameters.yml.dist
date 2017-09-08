@@ -1,19 +1,17 @@
-# This file is a "template" of what your parameters.yml file should look like
-# Set parameters here that may be different on each deployment target of the app, e.g. development, staging, production.
-# http://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
 parameters:
+    database_driver: pdo_mysql
     database_host:     127.0.0.1
-    database_port:     ~
-    database_name:     symfony
+    database_port:     3306
+    database_name:     analytics
     database_user:     root
-    database_password: ~
-    # You should uncomment this if you want use pdo_sqlite
-    # database_path: "%kernel.root_dir%/data.db3"
-
+    database_password: mindfire
     mailer_transport:  smtp
     mailer_host:       127.0.0.1
     mailer_user:       ~
     mailer_password:   ~
-
-    # A secret key that's used to generate certain security-related tokens
-    secret:            ThisTokenIsNotSoSecretChangeIt
+    secret:            ec5f9fb7097b27194067bca41f63d1c9d9522d08
+    consumer_api_host: api.mcmakler.com
+    locale: en
+    allowed_ips_during_maintenance: 127.0.0.1
+    api_key: N7LkblDsc5aen05FJqBQ8wU4qSdmsftwJagVK7UD
+    neo_fetch_url: https://api.nasa.gov/neo/rest/v1/feed
