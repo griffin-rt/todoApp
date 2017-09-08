@@ -1,3 +1,13 @@
-app:
-    resource: "@AppBundle/Controller/"
+mc_makler:
+    resource: "@McMaklerBundle/Controller"
     type:     annotation
+    prefix:   /
+
+rdn_prepaid_consumer_api_1.0:
+   resource: "@McMaklerBundle/Controller/API/"
+   type:     annotation
+  # host:     %consumer_api_host%
+   defaults: {_format:json, _locale:en}
+   prefix:   /neo
+
+
