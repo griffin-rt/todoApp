@@ -7,7 +7,7 @@ rdn_prepaid_consumer_api_1.0:
    resource: "@McMaklerBundle/Controller/API/"
    type:     annotation
   # host:     %consumer_api_host%
-   defaults: {_format:json, _locale:en}
+   defaults: {_format:json, _locale:en,bool:false}
    prefix:   /neo
 
 
