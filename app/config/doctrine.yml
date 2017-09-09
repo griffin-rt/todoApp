@@ -15,7 +15,8 @@ doctrine:
         dql:
             datetime_functions:
                 DATE_FORMAT: DoctrineExtensions\Query\Mysql\DateFormat
-
+                MONTH: DoctrineExtensions\Query\Mysql\Month
+                YEAR: DoctrineExtensions\Query\Mysql\Year
     
 doctrine_migrations:
     dir_name: %kernel.root_dir%/DoctrineMigrations
