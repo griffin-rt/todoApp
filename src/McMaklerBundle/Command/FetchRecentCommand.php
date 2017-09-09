@@ -94,7 +94,7 @@ class FetchRecentCommand extends ContainerAwareCommand
             $neoObj->setNeoReferenceId($item['neo_reference_id']);
             $neoObj->setName($item['name']);
             $neoObj->setSpeed($item['speed']);
-            $neoObj->setDate($item['date']);
+            $neoObj->setDate(new \DateTime($item['date']));
             $neoObj->setIsPotentiallyHazardousAsteroid($item['is_potentially_hazardous_asteroid']);
             $em->persist($neoObj);
         }
