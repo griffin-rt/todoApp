@@ -52,7 +52,7 @@ class Neo
     /**
      * @var string
      *
-     * @ORM\Column(name="date", type="string", length=255)
+     * @ORM\Column(name="date", type="date", length=255)
      */
     private $date;
 
@@ -159,10 +159,11 @@ class Neo
         return $this->isPotentiallyHazardousAsteroid;
     }
 
+
     /**
      * Set date
      *
-     * @param string $date
+     * @param \DateTime $date
      * @return Neo
      */
     public function setDate($date)
@@ -175,7 +176,7 @@ class Neo
     /**
      * Get date
      *
-     * @return string 
+     * @return \DateTime 
      */
     public function getDate()
     {
