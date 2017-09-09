@@ -12,4 +12,61 @@ use Doctrine\ORM\EntityRepository;
  */
 class NeoRepository extends EntityRepository
 {
+    /**
+     * Returns a fastest asteroid which or may not be hazardous
+     * @param $is_hazardous
+     * @return array
+     */
+    public function getfastetAsteroid($is_hazardous = false)
+    {
+        $qb = $this->createQueryBuilder('n');
+        $qb->select('n')
+            ->where('n.isPotentiallyHazardousAsteroid=:hazard')
+            ->orderBy('n.speed', 'DESC')
+            ->setParameter('hazard', $is_hazardous)
+            ->setMaxResults(1);
+
+        return $qb->getQuery()->getArrayResult();
+    }
+
+    /**
+     * Returns a best year for asteroid which or may not be hazardous
+     * @param $is_hazardous
+     * @return array
+     */
+    public function getbestYear($is_hazardous = false)
+    {
+        $qb = $this->createQueryBuilder('bt');
+
+        $qb->select('count(bt.id) AS cval , YEAR(bt.date) as bestYear')
+            ->where('bt.isPotentiallyHazardousAsteroid=:hazard')
+            ->addGroupBy('bestYear')
+            ->orderBy('cval', 'DESC')
+            ->setParameter('hazard', $is_hazardous)
+            ->setMaxResults(1);
+        $result = $qb->getQuery()->getArrayResult();
+        unset($result[0]['cval']);
+        return $result[0];
+    }
+
+    /**
+     * Returns a best month for asteroid which or may not be hazardous
+     * @param $is_hazardous
+     * @return array
+     */
+    public function getbestMonth($is_hazardous = false)
+    {
+        $qb = $this->createQueryBuilder('bt');
+
+        $qb->select('count(bt.id) AS cval , MONTH(bt.date) as bestMonth')
+            ->where('bt.isPotentiallyHazardousAsteroid=:hazard')
+            ->addGroupBy('bestMonth')
+            ->orderBy('cval', 'DESC')
+            ->setParameter('hazard', $is_hazardous)
+            ->setMaxResults(1);
+        $result = $qb->getQuery()->getArrayResult();
+        unset($result[0]['cval']);
+        return $result[0];
+    }
+
 }
