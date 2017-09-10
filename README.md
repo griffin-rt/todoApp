@@ -71,4 +71,4 @@
  - API documentation is available at `/api/doc`
  
    
- **NOTE:** This is an initial phase with minimal features. This shall add more features as per requirements.  
+ **NOTE:** This is an initial phase with minimal features. As or when requirements arises, more features shall be added.  
