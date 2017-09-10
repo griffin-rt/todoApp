@@ -28,7 +28,7 @@ class APIController extends BaseController
      * @ApiDoc(
      *  resource=false,
      *  section="Consumer",
-     *  description="API used to fetch asteroid details",
+     *  description="Action to fetch hazardous asteroid",
      *  requirements={
      *      {
      *          "name"="_locale",
@@ -84,7 +84,7 @@ class APIController extends BaseController
      * @ApiDoc(
      *  resource=false,
      *  section="Consumer",
-     *  description="API used to fetch asteroid details",
+     *  description="Action to fetch fastest asteroid",
      *  requirements={
      *      {
      *          "name"="_locale",
@@ -138,7 +138,7 @@ class APIController extends BaseController
      * @ApiDoc(
      *  resource=false,
      *  section="Consumer",
-     *  description="API used to fetch asteroid details",
+     *  description="Action to get year with most asteroids",
      *  requirements={
      *      {
      *          "name"="_locale",
@@ -191,7 +191,7 @@ class APIController extends BaseController
      * @ApiDoc(
      *  resource=false,
      *  section="Consumer",
-     *  description="API used to fetch asteroid details",
+     *  description="Action to get month with most asteroids",
      *  requirements={
      *      {
      *          "name"="_locale",
