@@ -66,7 +66,7 @@
    
      - `php app/console nasa:fetch-three `
   
- ##Other Information
+ ## Other Information
    
  - API documentation is available at `/api/doc`
  
