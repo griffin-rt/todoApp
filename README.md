@@ -57,13 +57,18 @@
     
    - Create a database
    - Run composer install -o
-   - Specify API key,base URL and db credentials
-   - Clear cache and using suitable permissions using following.
+   - Specify all parameters.
+   - Clear cache and assign suitable permissions using following.
       
      - `php app/console cache:clear --env=prod `
      - `sudo chmod -R 777 app/cache app/logs` 
    - Dump data in your specified db using following command.
    
      - `php app/console nasa:fetch-three `
-     
-   **NOTE:** This is an initial phase with minimal features. This shall add more features as per requirements.  
+  
+ ##Other Information
+   
+ - API documentation is available at `/api/doc`
+ 
+   
+ **NOTE:** This is an initial phase with minimal features. This shall add more features as per requirements.  
